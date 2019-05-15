@@ -1,0 +1,12 @@
+.card {
+    border: 0;
+    border-radius: 0;
+}
+
+.card-image {
+    background-position: center;
+}
+
+.text-white {
+    background-color: rgba(37, 37, 37, .3);
+}

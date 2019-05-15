@@ -1,18 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { HousesComponent } from './components/houses/houses.component';
+import { NotFoundComponent } from './components/shared/not-found/not-found.component';
+
+import { HousesService } from './services/houses.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HouseComponent } from './components/house/house.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent,
+    HousesComponent,
+    NotFoundComponent,
+    HouseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HousesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
