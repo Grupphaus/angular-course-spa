@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HousesService } from '../../services/houses.service';
 
 @Component({
   selector: 'app-house',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseComponent implements OnInit {
 
-  constructor() { }
+  private house: any = {};
+  private houseData: any = {};
+  private currentSeat: string;
+  private apiLoaded = false;
+
+  constructor(private activatedRoute: ActivatedRoute, private _houses: HousesService) { }
 
   ngOnInit() {
-  }
+
+    this.activatedRoute.params.subscribe(params => {
+      this.house = params;
+    });
+
+    this._houses.getHouseData(this.house.name).subscribe(response => {
+      this.houseData = response[0];
+      this.currentSeat = this.houseData.seat[0];
+      this.apiLoaded = true;
+      console.log(this.houseData);
+    });
+    }
 
 }

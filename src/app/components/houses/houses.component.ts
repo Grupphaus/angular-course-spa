@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HousesService } from 'src/app/services/houses.service';
+import { HousesService } from '../../services/houses.service';
 
 @Component({
   selector: 'app-houses',
@@ -17,7 +17,11 @@ export class HousesComponent implements OnInit {
   ngOnInit() {
     this.houses1 = ['house-stark', 'house-targaryen', 'house-lannister', 'house-baratheon'];
     this.houses2 = ['house-greyjoy', 'house-tully', 'house-frey', 'house-arryn'];
-    this.houses3 = ['house-karstark', 'house-tyrell', 'house-martell', 'house-clegane'];
+    this.houses3 = ['house-bolton', 'house-tyrell', 'house-martell', 'house-clegane'];
+
+    // this._houses.getHouseData('house-stark').subscribe(
+    //   rta => console.log(rta)
+    // );
   }
 
 }

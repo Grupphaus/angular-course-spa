@@ -1,3 +1,8 @@
-<div class="container animated fade pt-4 mt-4">
-  success
+<div *ngIf="!apiLoaded" class="d-flex justify-content-center loader">
+  
+</div>
+<div *ngIf="apiLoaded" class="container animated fade pt-4 mt-4 text-center">
+  <h2>{{ this.houseData.name }} of {{ this.currentSeat }}</h2>
+  <hr>
+  <img src="{{ this.houseData.logoURL }}" alt="{{ this.houseData.sigil }}">
 </div>
