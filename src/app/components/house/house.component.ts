@@ -13,6 +13,7 @@ export class HouseComponent implements OnInit {
   private houseData: any = {};
   private currentSeat: string;
   private apiLoaded = false;
+  private description: string;
 
   constructor(private activatedRoute: ActivatedRoute, private _houses: HousesService) { }
 
@@ -28,6 +29,8 @@ export class HouseComponent implements OnInit {
       this.apiLoaded = true;
       console.log(this.houseData);
     });
+
+    this.description = this._houses.getHouseDescription(this.house.name);
     }
 
 }

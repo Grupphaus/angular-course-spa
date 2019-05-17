@@ -1,8 +1,9 @@
 <div *ngIf="!apiLoaded" class="d-flex justify-content-center loader">
-  
+  <!-- todo: loader -->
 </div>
-<div *ngIf="apiLoaded" class="container animated fade pt-4 mt-4 text-center">
+<div *ngIf="apiLoaded" class="container animated fade pt-4 text-center">
   <h2>{{ this.houseData.name }} of {{ this.currentSeat }}</h2>
   <hr>
-  <img src="{{ this.houseData.logoURL }}" alt="{{ this.houseData.sigil }}">
+  <img class="mb-2 banner" src="{{ this.houseData.logoURL }}" alt="{{ this.houseData.sigil }}">
+  <p class="mt-4 text-left">{{ this.description }}</p>
 </div>

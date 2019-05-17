@@ -1,0 +1,36 @@
+.container:not(.icons) {
+    font-family: 'Merriweather', serif;
+}
+
+.copy {
+    background-color: #E7DFDD;
+}
+
+.fab {
+    font-size: 55px;
+    opacity: .7;
+}
+
+.fa-html5 {
+    color: #e34f26;
+}
+
+.fa-css3-alt {
+    color: #002561;
+}
+
+.fa-js-square {
+    color: #f7df1e;
+}
+
+.fa-angular {
+    color: #b52e31;
+}
+
+.fa-bootstrap {
+    color: #5E3F8A;
+}
+
+.fa-font-awesome {
+    color: #228AE6;
+}

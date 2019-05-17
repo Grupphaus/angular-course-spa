@@ -1,7 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-* {
+/* * {
     font-family: 'Merriweather', serif;
+} */
+
+@font-face {
+    font-family: 'got';
+    src: url('./assets/fonts/game_of_thrones-webfont.woff2') format('woff2'),
+         url('./assets/fonts/game_of_thrones-webfont.woff') format('woff'),
+         url('./assets/fonts/Game_of_Thrones.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -48,6 +57,7 @@
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    min-height: 100%;
   }
   
   /* Sections
@@ -58,6 +68,8 @@
    */
   
   body {
+    min-height: 100vh;
+    padding: 0 !important;
     margin: 0;
     padding-bottom: 1.5em;
   }
@@ -382,4 +394,13 @@
   
   [hidden] {
     display: none;
+  }
+
+  @media (max-width: 640px) {
+      h2 {
+          font-size: 1.6em;
+      }
+      h5 {
+          font-size: 1.1em;
+      }
   }

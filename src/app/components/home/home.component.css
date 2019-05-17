@@ -10,3 +10,44 @@
 .text-white {
     background-color: rgba(37, 37, 37, .3);
 }
+
+.home {
+    background-image: url("./../../../assets/kings-landing-min.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: calc(100vh - 75px);
+}
+
+main {
+    background-color: rgba(37, 37, 37, .6);
+    padding-bottom: 75px !important;
+}
+
+main h1 {
+    font-size: 45px;
+}
+
+main h1, h3 {
+    font-family: 'got', serif;
+    color: #fdfdfc;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 640px) {
+    main h1 {
+        font-size: 30px;
+    }
+    main h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    main h1 {
+        font-size: 25px
+    }
+    main h3 {
+        font-size: 15px;
+    }
+}
