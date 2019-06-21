@@ -9,6 +9,10 @@ export class HousesService {
 
   constructor(private _http: HttpClient) { }
 
+  public housesArr = ['house-stark', 'house-targaryen', 'house-lannister', 'house-baratheon',
+                       'house-greyjoy', 'house-tully', 'house-frey', 'house-arryn',
+                       'house-bolton', 'house-tyrell', 'house-martell', 'house-clegane'];
+
   upperCaseFirstLetter = text =>
     text.toLowerCase().split('-').map((s) =>
       s.charAt(0).toUpperCase() + s.substring(1)).join(' ')
@@ -18,14 +22,14 @@ export class HousesService {
   }
 
   search(term: string) {
-    let housesArr = [];
     term = term.toLowerCase();
-
-    for(let house of housesArr) {
-      if (house.toLowerCase().indexOf(term) >= 0) {
-        housesArr.push(house.toLowerCase());
+    let result = [];
+    for(let house of this.housesArr) {
+      if (house.toLowerCase().split('-').join(' ').indexOf(term) >= 0) {
+        result.push(house.toLowerCase());
       }
     }
+    return result;
   }
 
   getHouseDescription(name: string) {

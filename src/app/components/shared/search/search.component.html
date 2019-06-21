@@ -1,4 +1,14 @@
 <div class="container animated fade pt-4">
-  <h2>Click on a Sigil for more info</h2>
+  <h2>Showing results for: {{ this.term }}</h2>
   <hr />
+  <div class="card-group first-group mb-4">
+      <div *ngFor="let house of this.houses; let i = index" class="card">
+        <a [routerLink]="['/houses/house', house]">
+          <img class="card-img-top" src="./../../../assets/{{house}}.jpg" alt="{{ house }}}" />
+        </a>
+          <div class="card-footer">
+            <small class="text-muted"><a href="https://www.flickr.com/photos/liquidsouldesign/" target="_blank"> GoT Houses </a> | by Thomas Gateley</small>
+          </div>
+      </div>
+  </div>
 </div>

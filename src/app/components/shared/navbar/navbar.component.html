@@ -19,7 +19,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input #search (keydown.enter)="houseSearch(search.value)" class="form-control mr-sm-2" type="search" placeholder="House name" aria-label="Search">
+      <input #search (keydown.enter)="houseSearch(search.value); $event.preventDefault()" class="form-control mr-sm-2" type="text" placeholder="House name" aria-label="Search">
       <button (click)="houseSearch(search.value)" class="btn btn-outline-secondary my-2 my-sm-0" type="button">Search</button>
     </form>
   </div>

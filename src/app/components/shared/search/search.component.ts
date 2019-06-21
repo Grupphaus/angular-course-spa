@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HousesService } from '../../../services/houses.service';
 
 @Component({
   selector: 'app-search',
@@ -8,11 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  houses: any[] = [];
+  term: string;
+
+  constructor(private activatedRoute: ActivatedRoute, private _housesService: HousesService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      console.log(params['term'])
+      this.term = params['term'];
+      this.houses = this._housesService.search(params['term']);
     })
   }
 

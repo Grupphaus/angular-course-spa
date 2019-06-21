@@ -13,6 +13,7 @@ const ROUTES: Routes = [
   { path: 'houses', component: HousesComponent },
   { path: 'houses/house/:name', component: HouseComponent },
   { path: 'search/:term', component: SearchComponent },
+  { path: 'not-found', component: NotFoundComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 

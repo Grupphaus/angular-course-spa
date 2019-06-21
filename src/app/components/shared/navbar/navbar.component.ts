@@ -14,7 +14,9 @@ export class NavbarComponent implements OnInit {
   }
   
   houseSearch(term: string) {
-    this.router.navigate(['/search', term]);
+    if (term) {
+      this.router.navigate(['/search', term]);
+    }
   }
 
 }
