@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HousesComponent } from './components/houses/houses.component';
 import { HouseComponent } from './components/house/house.component';
+import { SearchComponent } from './components/shared/search/search.component';
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
 
 const ROUTES: Routes = [
@@ -11,6 +12,7 @@ const ROUTES: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'houses', component: HousesComponent },
   { path: 'houses/house/:name', component: HouseComponent },
+  { path: 'search/:term', component: SearchComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 

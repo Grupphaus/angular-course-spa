@@ -17,6 +17,17 @@ export class HousesService {
     return this._http.get('https://api.got.show/api/show/houses/' + this.upperCaseFirstLetter(name));
   }
 
+  search(term: string) {
+    let housesArr = [];
+    term = term.toLowerCase();
+
+    for(let house of housesArr) {
+      if (house.toLowerCase().indexOf(term) >= 0) {
+        housesArr.push(house.toLowerCase());
+      }
+    }
+  }
+
   getHouseDescription(name: string) {
     let description: string = "";
 

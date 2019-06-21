@@ -12,6 +12,7 @@ import { NotFoundComponent } from './components/shared/not-found/not-found.compo
 import { HousesService } from './services/houses.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HouseComponent } from './components/house/house.component';
+import { SearchComponent } from './components/shared/search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HouseComponent } from './components/house/house.component';
     AboutComponent,
     HousesComponent,
     NotFoundComponent,
-    HouseComponent
+    HouseComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
