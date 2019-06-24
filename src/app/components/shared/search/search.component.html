@@ -1,7 +1,7 @@
 <div class="container animated fade pt-4">
   <h2>Showing results for: {{ this.term }}</h2>
   <hr />
-  <div class="card-group first-group mb-4">
+  <div class="wrap mb-4 d-flex justify-content-center">
       <div *ngFor="let house of this.houses; let i = index" class="card">
         <a [routerLink]="['/houses/house', house]">
           <img class="card-img-top" src="./../../../assets/{{house}}.jpg" alt="{{ house }}}" />

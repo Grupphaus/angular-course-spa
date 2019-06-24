@@ -1,0 +1,51 @@
+.wrapper {
+    background-image: url("./../../../../assets/3er.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 86px);
+    transition: all 200ms ease;
+}
+
+main {
+    background-color: rgba(37, 37, 37, .6);
+    padding-bottom: 86px !important;
+}
+
+main h1 {
+    font-size: 45px;
+    background-color: rgba(37, 37, 37, .3);
+    padding: 35px;
+    transition: all 200ms ease;
+}
+
+main h1, h3 {
+    font-family: 'got', serif;
+    color: #fdfdfc;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 640px) {
+    main h1 {
+        font-size: 35px;
+    }
+    main h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        background-image: url("./../../../../assets/3er-2.jpg");
+    }
+}
+
+@media (max-width: 375px) {
+    main h1 {
+        font-size: 30px
+    }
+    main h3 {
+        font-size: 15px;
+    }
+}

@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HOUSE_DATA } from './houses.data';
+import { Router } from '@angular/router';
+import { fromEventPattern } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HousesService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private router: Router) { }
 
   public housesArr = ['house-stark', 'house-targaryen', 'house-lannister', 'house-baratheon',
                        'house-greyjoy', 'house-tully', 'house-frey', 'house-arryn',

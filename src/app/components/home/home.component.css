@@ -16,7 +16,8 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    height: calc(100vh - 75px);
+    background-position: center;
+    height: calc(100vh - 86px);
 }
 
 main {

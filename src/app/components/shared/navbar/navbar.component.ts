@@ -8,9 +8,15 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  public toggle: boolean;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event) {
+      }
+    });
   }
   
   houseSearch(term: string) {
