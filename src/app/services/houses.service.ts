@@ -25,8 +25,8 @@ export class HousesService {
 
   search(term: string) {
     term = term.toLowerCase();
-    let result = [];
-    for(let house of this.housesArr) {
+    const result = [];
+    for (const house of this.housesArr) {
       if (house.toLowerCase().split('-').join(' ').indexOf(term) >= 0) {
         result.push(house.toLowerCase());
       }
@@ -35,7 +35,7 @@ export class HousesService {
   }
 
   getHouseDescription(name: string) {
-    return HOUSE_DATA.[name.splice(6)];
+    return HOUSE_DATA[name.slice(6)];
   }
 
 }
