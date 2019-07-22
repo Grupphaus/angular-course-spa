@@ -12,7 +12,7 @@ export class HouseComponent implements OnInit {
   private house: any = {};
   private houseData: any = {};
   private currentSeat: string;
-  private apiLoaded = false;
+  public apiLoaded = false;
   private description: string;
 
   constructor(private activatedRoute: ActivatedRoute, private _houses: HousesService) { }
