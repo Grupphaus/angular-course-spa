@@ -5,14 +5,22 @@ Intellectual property rights belong to Home Box Office, Inc., David Benioff and 
 Game of Thrones is based on the novel series A song of Ice and Fire by George R.R. Martin.**
 
 House Sigils by [Thomas Gateley](https://www.flickr.com/photos/liquidsouldesign/)
-Data fetched and/or collected from: [API GoT](https://api.got.show/doc/)  and [Game of Thrones Wiki - Fandom]
-(https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
+
+
+Data fetched and/or collected from: 
+
+[API GoT](https://api.got.show/doc/)
+
+and [Game of Thrones Wiki - Fandom](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
 
 Powered by: 
 
 [Angular](https://angular.io/)
+
 [TypeScript](https://www.typescriptlang.org/)
+
 [Bootstrap](https://getbootstrap.com/)
+
 [Font Awesome](https://fontawesome.com/)
 
 ## Development server
