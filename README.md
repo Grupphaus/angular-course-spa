@@ -1,4 +1,4 @@
-# GoT Houses
+## GoT Houses
 
 **No copyright infringement intended. This is for personal, non-commercial use.
 Intellectual property rights belong to Home Box Office, Inc., David Benioff and D.B. Weiss.
@@ -9,11 +9,9 @@ House Sigils by [Thomas Gateley](https://www.flickr.com/photos/liquidsouldesign/
 
 Data fetched and/or collected from: 
 
-[API GoT](https://api.got.show/doc/)
+[API GoT](https://api.got.show/doc/) and [Game of Thrones Wiki - Fandom](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
 
-and [Game of Thrones Wiki - Fandom](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki)
-
-Powered by: 
+## Powered by: 
 
 [Angular](https://angular.io/)
 
