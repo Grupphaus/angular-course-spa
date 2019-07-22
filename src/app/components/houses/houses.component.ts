@@ -1,10 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, transition, animate, style } from '@angular/animations';
 import { HousesService } from '../../services/houses.service';
 
 @Component({
   selector: 'app-houses',
   templateUrl: './houses.component.html',
-  styleUrls: ['./houses.component.css']
+  styleUrls: ['./houses.component.css'],
+  animations: [ trigger('ltr', [
+    state('flyIn', style({ transform: 'translateX(0)' })),
+    transition(':enter', [
+      style({ transform: 'translateX(-100%)' }),
+      animate('1s 100ms ease')
+    ])
+  ]),
+    trigger('rtl', [
+      state('flyIn', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('1s 100ms ease')
+      ])
+    ])
+  ]
 })
 export class HousesComponent implements OnInit {
 
@@ -21,9 +37,6 @@ export class HousesComponent implements OnInit {
 
     // this.list = [].concat(...this.houses1, this.houses2, this.houses3);
 
-    // this._houses.getHouseData('house-stark').subscribe(
-    //   rta => console.log(rta)
-    // );
   }
 
 }

@@ -13,15 +13,12 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.router.events.subscribe(event => {
-      if (event) {
-      }
-    });
   }
-  
+
   houseSearch(term: string) {
     if (term) {
       this.router.navigate(['/search', term]);
+      this.toggle = false;
     }
   }
 

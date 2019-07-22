@@ -27,7 +27,6 @@ export class HouseComponent implements OnInit {
       this.houseData = response[0];
       this.currentSeat = this.houseData.seat[0];
       this.apiLoaded = true;
-      console.log(this.houseData);
     });
 
     this.description = this._houses.getHouseDescription(this.house.name);

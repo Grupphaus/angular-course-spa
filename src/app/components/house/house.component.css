@@ -10,3 +10,9 @@ h2, h3 {
     font-family: 'got', serif;
     word-spacing: 8px;
 }
+
+@media screen and (max-width: 720px) {
+    .banner {
+        width: 50%;
+    }
+}
